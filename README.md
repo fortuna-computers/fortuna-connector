@@ -24,4 +24,4 @@ Pins:
 
 Schematic:
 
-[Schematic](Schematic_fortuna-connector_2021-11-12.png)
+![Schematic](Schematic_fortuna-connector_2021-11-12.png)
