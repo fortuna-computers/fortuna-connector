@@ -50,3 +50,11 @@ Right side (notch)
 ## Schematic
 
 ![Schematic](schematic.png)
+
+## Software
+
+The following additional software is available in the repository folders. Everything is meant to run from the Pi.
+
+- **test-leds**: will blink all LEDs on the connector. Needs to be run with `sudo`.
+- **avr-skeleton**: `avrdude` configuration and sample project to program an AVR. Change the AVR type on the `Makefile`. (TBD)
+- **arm-skeleton**: an example project to program an ARM Cortex-M microcontroller. (TBD)
