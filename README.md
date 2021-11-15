@@ -9,7 +9,7 @@ The connector contains:
  - A male header to connect the Raspberry Pi to the board using a flat cable.
  - A male and female header to help debug any problems in communication (for example, using a digital analyzer)
  - A button to turn on/off power from the Pi to the board.
- - LEDs indicating activity in the protocols.
+ - LEDs indicating power and activity in the protocols.
 
 ## Photos
 
