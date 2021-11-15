@@ -27,6 +27,8 @@ Left side
 
 Right side (notch)
 
+| Pin | Type  | Classification | Pin in RPI | # pin in RPI |
+|-----|-------|----------------|------------|--------------|
 |  2  | 3.3V  | Power          | 3.3V       | 1, 17 |
 |  4  | RX    | Serial         | TXD        | 10    |
 |  6  | TX    | Serial         | RDX        | 8     |
