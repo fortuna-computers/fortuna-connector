@@ -12,10 +12,10 @@ The connector contains:
 
 ## Photos
 
-![Photo 1](connector1.jpg)
+![Photo 1](photos/connector1.jpg)
 With the Raspberry Pi attached
 
-![Photo 2](connector2.jpg)
+![Photo 2](photos/connector2.jpg)
 
 ## Main connector pinout
 
