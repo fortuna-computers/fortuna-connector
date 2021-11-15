@@ -1,4 +1,4 @@
-# fortuna-connector
+# Fortuna Connector
 
 This is a connector that plugs a Raspberry Pi to a board, and can be used to:
  - Have a Raspberry Pi programming multiple microcontroller types in the board (AVR, ARM, etc.)
@@ -9,6 +9,13 @@ The connector contains:
  - A male header to connect the Raspberry Pi to the board using a flat cable.
  - A male and female header to help debug any problems in communication (for example, using a digital analyzer)
  - LEDs indicating activity in the protocols.
+
+## Photos
+
+![Photo 1](connector1.jpg)
+With the Raspberry Pi attached
+
+![Photo 2](connector2.jpg)
 
 ## Main connector pinout
 
