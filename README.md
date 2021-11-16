@@ -43,10 +43,10 @@ Right side (notch)
 |  8  | SWIO  | SWD            | GPIO24     | 18    |
 | 10  | SWCLK | SWD            | GPIO25     | 22    |
 | 12  | CS1   | SPI            | CE1        | 26    |
-| 14  | CS2   | SPI            | GPIO28     | 28    |
+| 14  | RST   | SPI            | GPIO12     | 32    |
 | 16  | GND   | Power          | GND        | 6, 9, 14, 25, 30, 34, 39 |
 
-`GPIO` can be used as a generic pin to get information from the board to the PI or vice-versa. `CS0`, `CS1` and `CS2` can be used to activate SPI on either side, or as generic pins.
+`GPIO` can be used as a generic pin to get information from the board to the PI or vice-versa. `CS0`, `CS1` and `RST` can be used to activate SPI on either side, or as generic pins.
 
 ## Schematic
 
@@ -59,3 +59,15 @@ The following additional software is available in the repository folders. Everyt
 - **test-leds**: will blink all LEDs on the connector. Needs to be run with `sudo`.
 - **avr-skeleton**: `avrdude` configuration and sample project to program an AVR. Change the AVR type on the `Makefile`. (TBD)
 - **arm-skeleton**: an example project to program an ARM Cortex-M microcontroller. (TBD)
+
+The Makefile needs to be configured to choose the correct MCU, speed, etc... along with the reset line that is being used (for AVR). The following `make` commands are available:
+
+- `make`: compile source code
+- `make size`: print size of executable generated for the MCU
+- `make test-connection`: test if communication with the MCU is working
+- `make fuse`: program fuses (AVR only)
+- `make upload`: upload executable to the MCU
+- `make talk`: opens a serial connection from the computer to the MCU
+- `make clean`: delete the intermediate files generated
+
+A program called `reset` is also made available that simply resets the MCU. The source might need to be editted to set the correct reset line.
