@@ -9,9 +9,9 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(RESET_GPIO, GPIO.OUT)
 
 GPIO.output(RESET_GPIO, GPIO.LOW)
-time.sleep(0.1)
+#time.sleep(0.1)
 GPIO.output(RESET_GPIO, GPIO.HIGH)
-time.sleep(0.5)
-print("Controller is reset.")
+#time.sleep(0.1)
+#print("Controller is reset.")
 
 GPIO.cleanup()

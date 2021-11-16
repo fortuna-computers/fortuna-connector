@@ -2,7 +2,7 @@
 PROJECT=avr-skeleton
 
 # Object files (one for each source file)
-OBJECTS=main.o
+OBJECTS=main.o uart.o
 
 # Avrdude configuration to connect on the PI. See avrdude_gpio.conf.
 # Can be one of: pi_rst, pi_cs0, pi_cs1 or pi_gpio, depending on the RESET line in AVR.
@@ -36,8 +36,8 @@ ${PROJECT}.hex: ${PROJECT}.elf
 	arm-linux-gnueabihf-size ${PROJECT}.hex
 
 ${PROJECT}.elf: ${OBJECTS}
-	$(CC) -mmcu=${MCU} -o $@ $^ -Wl,--gc-sections
-	avr-size -C --mcu=${MCU} ${PROJECT}.elf	
+	$(CC) -mmcu=${MCU_GCC} -o $@ $^ -Wl,--gc-sections
+	avr-size -C --mcu=${MCU_GCC} ${PROJECT}.elf	
 
 test-connection:
 	sudo avrdude ${AVRDUDE_FLAGS}
@@ -49,7 +49,7 @@ fuse:
 	sudo avrdude ${AVRDUDE_FLAGS} ${FUSES}
 
 size: ${PROJECT}.elf
-	avr-size -C --mcu=${MCU} ${PROJECT}.elf	
+	avr-size -C --mcu=${MCU_GCC} ${PROJECT}.elf	
 
 talk:
 	@echo "Press Ctrl+A and then Shift+K to exit."
