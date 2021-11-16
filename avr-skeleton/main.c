@@ -7,6 +7,6 @@
 int main()
 {
     uart_init();
-    puts_P(PSTR("Hello world!\r"));
+    puts_P(PSTR("Hello world!"));
     return 0;
 }
