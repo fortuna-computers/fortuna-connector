@@ -23,7 +23,7 @@ static int uart_getchar(FILE* f)
     return UDR;
 }
 
-void uart_init()
+void uart_init(void)
 {
     _delay_ms(100);
     

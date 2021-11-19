@@ -4,7 +4,7 @@
 
 #include "uart.h"
 
-int main()
+int main(void)
 {
     uart_init();
     puts_P(PSTR("Hello world!"));
