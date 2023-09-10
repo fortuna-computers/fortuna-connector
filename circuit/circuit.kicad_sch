@@ -1,0 +1,31 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 11f66995-291c-4ca8-87f0-172fdbdb90b0)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 31.75 27.94) (size 43.18 54.61) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid ad172088-f78e-44ab-9f04-a2b7f824d021)
+    (property "Sheetname" "ISCP" (at 31.75 27.2284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "untitled.kicad_sch" (at 31.75 83.1346 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "circuit"
+        (path "/11f66995-291c-4ca8-87f0-172fdbdb90b0" (page "2"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
