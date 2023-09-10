@@ -22,16 +22,16 @@ With the Raspberry Pi attached
 
 Left side
 
-| Pin | Type  | Classification | Pin in RPI | # pin in RPI |
-|-----|-------|----------------|------------|--------------|
-|  1  | 5V    | Power          | 5V         | 2, 4  |
-|  3  | SDA   | I²C            | SDA        | 3     |
-|  5  | SCL   | I²C            | SCL        | 5     |
-|  7  | GPIO  | GPIO           | GPIO4      | 7     |
-|  9  | MOSI  | SPI            | MOSI       | 19    |
-| 11  | MISO  | SPI            | MISO       | 21    |
-| 13  | SCK   | SPI            | SCK        | 23    |
-| 15  | CS0   | SPI            | CE0        | 24    |
+| Pin | Type  | Classification | Pin in RPI    | # pin in RPI |
+|-----|-------|----------------|---------------|--------------|
+|  1  | 5V    | Power          | 5V            | 2, 4  |
+|  3  | SDA   | I²C            | SDA           | 3     |
+|  5  | SCL   | I²C            | SCL           | 5     |
+|  7  | GPIO  | GPIO           | GPIO4         | 7     |
+|  9  | MOSI  | SPI            | MOSI (GPIO10) | 19    |
+| 11  | MISO  | SPI            | MISO (GPIO9)  | 21    |
+| 13  | SCK   | SPI            | SCK (GPIO11)  | 23    |
+| 15  | CS0   | SPI            | CE0           | 24    |
 
 Right side (notch)
 
@@ -43,7 +43,7 @@ Right side (notch)
 |  8  | SWIO  | SWD            | GPIO24     | 18    |
 | 10  | SWCLK | SWD            | GPIO25     | 22    |
 | 12  | CS1   | SPI            | CE1        | 26    |
-| 14  | RST   | SPI            | GPIO12     | 32    |
+| 14  | RST/CS2 | SPI          | GPIO12     | 32    |
 | 16  | GND   | Power          | GND        | 6, 9, 14, 25, 30, 34, 39 |
 
 `GPIO` can be used as a generic pin to get information from the board to the PI or vice-versa. `CS0`, `CS1` and `RST` can be used to activate SPI on either side, or as generic pins.
