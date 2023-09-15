@@ -11,39 +11,32 @@ The connector contains:
  - A button to turn on/off power from the Pi to the board.
  - LEDs indicating power and activity in the protocols.
 
+# ISCP programmer
+
 ## Photos
 
 ![image](https://github.com/fortuna-computers/fortuna-connector/assets/84652/fd7043c8-1064-4048-8482-0788b9015783)
 
 ## Main connector pinout
 
-Left side
+Top side
 
 | Pin | Type  | Classification | Pin in RPI    | # pin in RPI |
 |-----|-------|----------------|---------------|--------------|
-|  1  | 5V    | Power          | 5V            | 2, 4  |
-|  3  | SDA   | I²C            | SDA           | 3     |
-|  5  | SCL   | I²C            | SCL           | 5     |
-|  7  | GPIO  | GPIO           | GPIO4         | 7     |
-|  9  | MOSI  | SPI            | MOSI (GPIO10) | 19    |
-| 11  | MISO  | SPI            | MISO (GPIO9)  | 21    |
-| 13  | SCK   | SPI            | SCK (GPIO11)  | 23    |
-| 15  | CS0   | SPI            | CE0           | 24    |
+|  1  | MOSI  | SPI            | MOSI (GPIO10) | 19    |
+|  2  | RX    | Serial         | RDX           | 10    |
+|  3  | RST   | SPI            | GPIO1         | 28    |
+|  4  | SCK   | SPI            | SCK (GPIO11)  | 23    |
+|  5  | MISO  | SPI            | MISO (GPIO9)  | 21    |
 
-Right side (notch)
+Bottom side (notch)
 
-| Pin | Type  | Classification | Pin in RPI | # pin in RPI |
-|-----|-------|----------------|------------|--------------|
-|  2  | 3.3V  | Power          | 3.3V       | 1, 17 |
-|  4  | RX    | Serial         | TXD        | 10    |
-|  6  | TX    | Serial         | RDX        | 8     |
-|  8  | SWIO  | SWD            | GPIO24     | 18    |
-| 10  | SWCLK | SWD            | GPIO25     | 22    |
-| 12  | CS1   | SPI            | CE1        | 26    |
-| 14  | RST/CS2 | SPI          | GPIO12     | 32    |
-| 16  | GND   | Power          | GND        | 6, 9, 14, 25, 30, 34, 39 |
+| Pin     | Type  | Classification | Pin in RPI | # pin in RPI |
+|---------|-------|----------------|------------|--------------|
+| 6, 7, 8 | GND   | Power          | GND        | 6, 9, 14, 25, 30, 34, 39 |
+| 9       | TX    | Serial         | TDX        | 8     |
+| 10      | VCC   | Power          | 5V or 3V3  | 2, 4  |
 
-`GPIO` can be used as a generic pin to get information from the board to the PI or vice-versa. `CS0`, `CS1` and `RST` can be used to activate SPI on either side, or as generic pins.
 
 ## Schematic
 
