@@ -44,13 +44,9 @@ Bottom side (notch)
 
 ## Software
 
-The following additional software is available in the repository folders. Everything is meant to run from the Pi.
+A few sample project skeletons are provided in the package.
 
-- **test-leds**: will blink all LEDs on the connector. Needs to be run with `sudo`.
-- **avr-skeleton**: `avrdude` configuration and sample project to program an AVR. Change the AVR type on the `Makefile`. (TBD)
-- **arm-skeleton**: an example project to program an ARM Cortex-M microcontroller. (TBD)
-
-The Makefile needs to be configured to choose the correct MCU, speed, etc... along with the reset line that is being used (for AVR). The following `make` commands are available:
+The Makefile needs to be configured to choose the correct MCU, speed, etc.. The following `make` commands are available:
 
 - `make`: compile source code
 - `make size`: print size of executable generated for the MCU
@@ -60,4 +56,4 @@ The Makefile needs to be configured to choose the correct MCU, speed, etc... alo
 - `make talk`: opens a serial connection from the computer to the MCU
 - `make clean`: delete the intermediate files generated
 
-A program called `reset` is also made available that simply resets the MCU. The source might need to be editted to set the correct reset line.
+A program called `reset` is also made available that simply resets the MCU.
