@@ -32,7 +32,7 @@ void uart_init(void)
     UBRRL = UBRRL_VALUE;
 
     // set config
-    UCSRC = (1<<URSEL) | (1<<UCSZ1) | (1<<UCSZ0);   // Async-mode 
+    UCSRC = (1<<USBS) | (1<<UCSZ1) | (1<<UCSZ0);   // Async-mode 
     UCSRB = (1<<RXEN) | (1<<TXEN);     // Enable Receiver and Transmitter
 
     static FILE uart = FDEV_SETUP_STREAM(uart_putchar, uart_getchar, _FDEV_SETUP_RW);

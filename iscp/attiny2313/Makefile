@@ -9,17 +9,17 @@ OBJECTS=main.o uart.o
 AVRDUDE_CONFIG=pi_rst
 
 # AVR fuses: external crystal (see https://www.engbedded.com/fusecalc/)
-FUSES=-U lfuse:w:0xff:m -U hfuse:w:0xd9:m
+FUSES=-U lfuse:w:0xe4:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
 
 # Microcontroller
-MCU_GCC=atmega16
-MCU_AVRDUDE=atmega16
+MCU_GCC=attiny2313
+MCU_AVRDUDE=attiny2313
 
 # Microcontroller speed, in Hz. Used by avr-libc for delays.
-F_CPU=16000000UL
+F_CPU=8000000UL
 
 # Serial speed, in baud. Used by avr-libc for UART speed calculation.
-BAUD=38400
+BAUD=9600
 
 #
 # Rules
@@ -58,7 +58,7 @@ size: ${PROJECT}.elf
 talk:
 	@echo "Press Ctrl+A and then Shift+K to exit."
 	@sleep 1
-	screen /dev/ttyAMA0 38400
+	screen /dev/ttyAMA0 ${BAUD}
 
 clean:
 	rm -f ${OBJECTS} ${PROJECT}.elf ${PROJECT}.hex

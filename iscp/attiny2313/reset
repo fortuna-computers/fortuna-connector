@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-RESET_GPIO = 12
+RESET_GPIO = 1
 
 import RPi.GPIO as GPIO
 import time
