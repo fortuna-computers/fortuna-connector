@@ -13,10 +13,7 @@ The connector contains:
 
 ## Photos
 
-![Photo 2](photos/connector2.jpg)
-
-![Photo 1](photos/connector1.jpg)
-With the Raspberry Pi attached
+![image](https://github.com/fortuna-computers/fortuna-connector/assets/84652/fd7043c8-1064-4048-8482-0788b9015783)
 
 ## Main connector pinout
 
