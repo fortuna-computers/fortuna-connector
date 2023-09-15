@@ -8,7 +8,7 @@ OBJECTS=main.o uart.o
 # Can be one of: pi_rst, pi_cs0, pi_cs1 or pi_gpio, depending on the RESET line in AVR.
 AVRDUDE_CONFIG=pi_rst
 
-# AVR fuses: external crystal (see https://www.engbedded.com/fusecalc/)
+# AVR fuses: internal oscillator (see https://www.engbedded.com/fusecalc/)
 FUSES=-U lfuse:w:0xe4:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
 
 # Microcontroller
