@@ -40,7 +40,7 @@ Bottom side (notch)
 
 ## Schematic
 
-![Schematic](schematic.png)
+![image](https://github.com/fortuna-computers/fortuna-connector/assets/84652/eb470632-53df-4b0f-bc32-a771c539066c)
 
 ## Software
 
